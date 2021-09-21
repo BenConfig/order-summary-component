@@ -74,15 +74,22 @@ body {
     text-decoration: none;
 }
 
+
 .order-summary__link--change {
     font-size: .9em;
     color: hsl(245, 75%, 52%);
+    border-radius: inherit;
     text-decoration: underline hsl(223, 47%, 23%) 1px;
 }
 
 .order-summary__link--change:hover {
     color: hsl(243, 75%, 67%);
     text-decoration: none;
+}
+
+.order-summary__link--change:focus {
+    outline: max(1px, 0.125rem)  dotted hsl(245, 75%, 52%);
+    outline-offset: .25rem;
 }
 
 .order-summary__link--proceed {
@@ -93,7 +100,12 @@ body {
     background: hsl(245, 75%, 52%);
 }
 
-.order-summary__link--proceed:hover { background: #746EEA; }
+.order-summary__link--proceed:hover { background: hsl(243, 75%, 67%); }
+
+.order-summary__link--proceed:focus {
+    outline: max(1px, 0.125rem) dotted white;
+    outline-offset: -.5rem;
+}
 
 .order-summary__link--cancel {
     display: inline-flex;
@@ -102,6 +114,11 @@ body {
 }
 
 .order-summary__link--cancel:hover { color: hsl(223, 47%, 23%); }
+
+.order-summary__link--cancel:focus {
+    outline: max(1px, 0.125rem) dotted hsl(224, 23%, 55%);
+    outline-offset: .25rem;
+}
 
 @media only screen and (min-width: 50em) {
     body { background-image: url('images/pattern-background-desktop.svg'); }
